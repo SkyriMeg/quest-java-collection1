@@ -41,13 +41,12 @@ public class Thanos {
         // OK : Shuffle the heroes list
         Collections.shuffle(heroes);
 
-        // TODO : Keep only the half of the list
-        heroes.subList(0, ((heroes.size()) / 2));
-        // heroes.subList(0, 3);
+        // OK : Keep only the half of the list
+        ArrayList<Hero> survivors = new ArrayList<>(heroes.subList(0, (heroes.size()) / 2));
 
         // OK : Loop throught the list and display the name of the remaining heroes
-        for (Hero hero : heroes) {
-            System.out.println(hero.getName());
+        for (Hero survivor : survivors) {
+            System.out.println(survivor.getName());
         }
     }
 }
